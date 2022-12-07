@@ -675,6 +675,8 @@ There are optional volume paths that can be attached to supply content to be cop
 
 `/mods`
 : contents are synchronized into `/data/mods` for Fabric and Forge related server types. The destination can be changed by setting `COPY_MODS_DEST`.
+    
+When adding separate mods for Fabric (as in not bundled in a modpack) ensure that you've added Fabric API .jar file in proper version.
 
 `/config`
 : contents are synchronized into `/data/config` by default, but can be changed with `COPY_CONFIG_DEST`. For example, `-v ./config:/config -e COPY_CONFIG_DEST=/data` will allow you to copy over files like `bukkit.yml` and so on directly into the server directory. Set `SYNC_SKIP_NEWER_IN_DESTINATION=false` if you want files from `/config` to take precedence over newer files in `/data/config`.
